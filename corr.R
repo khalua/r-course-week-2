@@ -3,7 +3,7 @@
 corr <- function(threshold = 0) {
 ##        data.files <- list.files(path = datadir, pattern = "csv$", full.names = TRUE)
         all.data <- data.frame()   ## all.data gets cleaned at every loop
-##       all.data <- rbind(all.data, read.csv(data.files[i])) ##cause this fucker likes to append.
+##       all.data <- rbind(all.data, read.csv(data.files) ##cause this fucker likes to append.
         all.data <- read.csv("specdata/001.csv")
         good <- complete.cases(all.data) ## temp variable to get to next one
         all.data.minus.na <- all.data[good,]
